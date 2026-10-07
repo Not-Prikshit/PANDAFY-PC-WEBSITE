@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PANDAFY</title>
-    <meta name="description" content="PANDAFY is a platform that provides various features and services.">
-    <meta name="keywords" content="PANDAFY, platform, features, services">
+    <meta name="description" content="PANDAFY is a platform that helps you build discipline, focus, and healthy habits every day.">
+    <meta name="keywords" content="PANDAFY, platform, features, services, habits, discipline">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -16,11 +16,11 @@
 
 <body>
     <!-- Header Section -->
-    <header>
+    <header id="main-header">
         <div class="logo">
-            <a href="#"><img src="logo.png" alt="Logo" height="20px">PANDAFY</a>
+            <a href="#"><img src="logo.png" alt="PANDAFY Logo" height="20px">PANDAFY</a>
         </div>
-        <nav class="main-nav">
+        <nav class="main-nav" id="main-nav">
             <ul>
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -29,19 +29,33 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <button class="menu-button" aria-label="Toggle Menu">
+        <button class="menu-button" aria-label="Toggle Menu" id="menu-toggle">
             Menu
             <i class="fa-solid fa-ellipsis"></i>
         </button>
     </header>
+
+    <!-- Mobile Nav Overlay -->
+    <nav class="mobile-nav" id="mobile-nav" aria-hidden="true">
+        <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close Menu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
     <!-- Main Content Section -->
     <main>
         <section class="hero" id="home">
-           
-            <!-- id means that this section is main part of this page and it is home section of this page -->
+            <!-- Hero: main landing section -->
             <div class="hero-content">
                 <p class="hero-tagline">
-                    DISCIPLINE &nbsp; • &nbsp; COURAGE &nbsp; • &nbsp; BALANCE <!--&nbsp; means non breaking space-->
+                    DISCIPLINE &nbsp; &bull; &nbsp; COURAGE &nbsp; &bull; &nbsp; BALANCE
                 </p>
                 <h1>PANDAFY</h1>
                 <h2>A STRONGER YOU EVERYDAY</h2>
@@ -51,98 +65,145 @@
                     habits that truly matter.
                 </p>
                 <div class="hero-buttons">
-
                     <a href="#about" class="get-started">
                         Get Started
                         <i class="fa-solid fa-arrow-right-long"></i>
-
                     </a>
-
-                    <a href="https://youtu.be/Bla1TQ4UQ6o?si=VYaA-o89II_yP2vW" target="_blank" class="watch-trailer">
+                    <a href="https://youtu.be/Bla1TQ4UQ6o?si=VYaA-o89II_yP2vW" target="_blank" rel="noopener noreferrer" class="watch-trailer">
                         <i class="fa-solid fa-circle-play"></i>
                         Watch Trailer
                     </a>
-
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- Footer Section -->
     <footer class="site-footer">
 
-    <div class="footer-explore">
-        <a href="#features" class="footer-play">
-            <i class="fa-solid fa-play"></i>
-        </a>
-
-        <a href="#features" class="footer-explore-text">
-            <span>EXPLORE</span>
-            <span>MORE</span>
-        </a>
-    </div>
-
-<footer class="site-footer">
-    <div class="footer-feature">
-        <div class="feature-number">01</div>
-
-        <div class="feature-content">
-            <h3>BUILD HABITS</h3>
-            <p>
-                Small steps create<br>
-                big changes.
-            </p>
+        <div class="footer-explore">
+            <a href="#features" class="footer-play" aria-label="Explore features">
+                <i class="fa-solid fa-play"></i>
+            </a>
+            <a href="#features" class="footer-explore-text">
+                <span>EXPLORE</span>
+                <span>MORE</span>
+            </a>
         </div>
-    </div>
 
-    
-    <div class="footer-feature">
-        <div class="feature-number">02</div>
-
-        <div class="feature-content">
-            <h3>STAY FOCUSED</h3>
-            <p>
-                Remove distractions,<br>
-                find your flow.
-            </p>
+        <div class="footer-feature">
+            <div class="feature-number">01</div>
+            <div class="feature-content">
+                <h3>BUILD HABITS</h3>
+                <p>Small steps create<br>big changes.</p>
+            </div>
         </div>
-    </div>
 
-
-    <div class="footer-feature">
-        <div class="feature-number">03</div>
-
-        <div class="feature-content">
-            <h3>GROW EVERYDAY</h3>
-            <p>
-                A better you,<br>
-                one day at a time.
-            </p>
+        <div class="footer-feature">
+            <div class="feature-number">02</div>
+            <div class="feature-content">
+                <h3>STAY FOCUSED</h3>
+                <p>Remove distractions,<br>find your flow.</p>
+            </div>
         </div>
-    </div>
 
+        <div class="footer-feature">
+            <div class="feature-number">03</div>
+            <div class="feature-content">
+                <h3>GROW EVERYDAY</h3>
+                <p>A better you,<br>one day at a time.</p>
+            </div>
+        </div>
 
-    <div class="footer-socials">
+        <div class="footer-socials">
+            <a href="https://www.instagram.com/_rupesh_v_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/@rupeshyt_7" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://x.com/RupeshYadav_8" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="#" aria-label="Discord">
+                <i class="fa-brands fa-discord"></i>
+            </a>
+        </div>
 
-        <a href="https://www.instagram.com/_rupesh_v_/" target="_blank" aria-label="Instagram">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
+    </footer>
 
-        <a href="https://www.youtube.com/@rupeshyt_7" target="_blank"  aria-label="YouTube">
-            <i class="fa-brands fa-youtube"></i>
-        </a>
+    <!-- Scroll-to-top button -->
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
 
-        <a href="https://x.com/RupeshYadav_8" target="_blank" ="X">
-            <i class="fa-brands fa-x-twitter"></i>
-        </a>
+    <script>
+        // ── Active nav link on scroll ──────────────────────────────
+        const navLinks = document.querySelectorAll('.main-nav a');
+        const sections = document.querySelectorAll('section[id]');
 
-        <a href="#" aria-label="Discord">
-            <i class="fa-brands fa-discord"></i>
-        </a>
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#' + entry.target.id) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, { threshold: 0.6 });
 
-    </div>
+        sections.forEach(sec => sectionObserver.observe(sec));
 
-</footer>
+        // ── Header glassmorphism on scroll ─────────────────────────
+        const header = document.getElementById('main-header');
+        const scrollTopBtn = document.getElementById('scroll-top');
 
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 20);
+            const show = window.scrollY > 300;
+            scrollTopBtn.style.opacity = show ? '1' : '0';
+            scrollTopBtn.style.pointerEvents = show ? 'auto' : 'none';
+        });
 
+        // ── Mobile menu toggle ─────────────────────────────────────
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileNav = document.getElementById('mobile-nav');
+        const mobileClose = document.getElementById('mobile-nav-close');
+
+        function openMobileNav() {
+            mobileNav.classList.add('open');
+            mobileNav.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileNav() {
+            mobileNav.classList.remove('open');
+            mobileNav.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        menuToggle.addEventListener('click', openMobileNav);
+        mobileClose.addEventListener('click', closeMobileNav);
+        mobileNav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMobileNav));
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeMobileNav();
+        });
+
+        // ── Scroll-to-top ──────────────────────────────────────────
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ── Hero entrance animation ────────────────────────────────
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('.hero-content').classList.add('animate-in');
+        });
+    </script>
 </body>
 
 </html>
